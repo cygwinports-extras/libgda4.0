@@ -1,0 +1,43 @@
+ORIG_PN="libgda"
+
+inherit gnome2
+
+DESCRIPTION="GNOME Database Access libraries"
+HOMEPAGE="http://www.gnome-db.org/"
+
+PATCH_URI="3.99-cygwin.patch
+           3.99-load-providers.patch"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+
+n=0
+
+PKG_CONTENTS[$((n++))]="etc/ usr/bin/ usr/share/doc/ usr/share/libgda-4.0/dtd/
+                        usr/share/libgda-4.0/information_schema.xml
+                        usr/share/locale/"
+PKG_CONTENTS[$((n++))]="usr/include/ usr/lib/libgda*-4.0.*
+                        usr/lib/pkgconfig/libgda-4.0.pc
+                        usr/lib/pkgconfig/libgda-report-4.0.pc
+                        usr/lib/pkgconfig/libgda-xslt-4.0.pc
+                        usr/share/gtk-doc/"
+
+for prov in bdb mdb mysql postgres sqlite
+do
+	PKG_NAMES+=" ${PN}-provider-${prov}"
+	PKG_HINTS+=" ${prov}"
+	PKG_CONTENTS[$((n++))]="usr/lib/libgda-4.0/providers/*gda-${prov}.*
+                            usr/lib/pkgconfig/libgda-${prov}-4.0.pc
+                            usr/share/libgda-4.0/${prov}*"
+	CYGCONF_ARGS+=" --with-${prov#free}=/usr"
+done
+unset n
+
+for noprov in firebird ibmdb2 ldap msql odbc oracle sybase tds xbase
+do
+	CYGCONF_ARGS+=" --without-${noprov}"
+done
+
+CYGCONF_ARGS+=" --disable-binreloc"
+
+#DIFF_EXCLUDES="gda-report.dtd"

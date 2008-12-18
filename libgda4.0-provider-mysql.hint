@@ -1,6 +1,7 @@
 category: Database Gnome
-requires: cygwin gamin glib2 libintl8 libreadline6 libxml2
-sdesc: "GNOME Data Access libraries (runtime libs)"
+requires: cygwin libgda4.0_4 libmysqlclient15
+external-source: libgda4.0
+sdesc: "GNOME Data Access libraries (MySQL provider)"
 ldesc: "GNU Data Access (GDA) is an attempt to provide uniform access 
 to different kinds of data sources (databases, information servers, 
 mail spools, etc).

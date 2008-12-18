@@ -1,19 +1,16 @@
 ORIG_PN="libgda"
-SVN_REV=${PVP[3]}
-inherit gnome2 svn
+inherit gnome2
 
 DESCRIPTION="GNOME Database Access libraries"
 HOMEPAGE="http://www.gnome-db.org/"
 
-PKG_NAMES="${PN} ${PN}-devel"
-PKG_HINTS="setup devel"
+PKG_NAMES="${PN} ${PN}_4 ${PN}-bin ${PN}-devel"
 
-n=0
-
-PKG_CONTENTS[$((n++))]="etc/ usr/bin/ usr/share/doc/ usr/share/libgda-4.0/dtd/
+libgda4_0_4_CONTENTS="etc/ usr/bin/*-4.0-4.dll usr/share/doc/ usr/share/libgda-4.0/dtd/
                         usr/share/libgda-4.0/information_schema.xml
                         usr/share/locale/"
-PKG_CONTENTS[$((n++))]="usr/include/ usr/lib/libgda*-4.0.*
+libgda4_0_bin_CONTENTS="usr/bin/*-4.0.exe"
+libgda4_0_devel_CONTENTS="usr/include/ usr/lib/libgda*-4.0.*
                         usr/lib/pkgconfig/libgda-4.0.pc
                         usr/lib/pkgconfig/libgda-report-4.0.pc
                         usr/lib/pkgconfig/libgda-xslt-4.0.pc
@@ -22,13 +19,12 @@ PKG_CONTENTS[$((n++))]="usr/include/ usr/lib/libgda*-4.0.*
 for prov in bdb mdb mysql postgres sqlite
 do
 	PKG_NAMES+=" ${PN}-provider-${prov}"
-	PKG_HINTS+=" ${prov}"
-	PKG_CONTENTS[$((n++))]="usr/lib/libgda-4.0/providers/*gda-${prov}.*
-                            usr/lib/pkgconfig/libgda-${prov}-4.0.pc
-                            usr/share/libgda-4.0/${prov}*"
+	declare \
+	libgda4_0_provider_${prov}_CONTENTS="usr/lib/libgda-4.0/providers/*gda-${prov}.*
+	                                     usr/lib/pkgconfig/libgda-${prov}-4.0.pc
+	                                     usr/share/libgda-4.0/${prov}*"
 	CYGCONF_ARGS+=" --with-${prov#free}=/usr"
 done
-unset n
 
 for noprov in firebird ibmdb2 ldap msql odbc oracle sybase tds xbase
 do

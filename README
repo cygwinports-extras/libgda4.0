@@ -11,14 +11,15 @@ can be accessed through them.
 Runtime requirements:
   cygwin-1.5.25-15
   libdb4.6-4.6.21.3-1
-  libgamin1_0-0.1.10-1
-  libglib2.0_0-2.18.3-1
+  libgamin1_0-0.1.10-2
+  libglib2.0_0-2.18.4-1
   libintl8-0.17-2
   libmdb0-0.6pre1-1
-  libmysqlclient15-5.0.67-1
-  libpq5-8.2.9-1
-  libreadline6-5.2.12-10
-  libxml2-2.7.2-1
+  libmysqlclient15-5.0.75-1
+  libpq5-8.2.11-1
+  libreadline6-5.2.13-11
+  libsoup2.4_1-2.24.3-1
+  libxml2-2.7.3-1
   libxslt-1.1.24-2
 
 Build requirements:
@@ -45,23 +46,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libgda4.0-3.99.6-X-src.tar.bz2
+  unpack libgda4.0-3.99.11-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libgda4.0-3.99.6-X.cygport all
+  cygport ./libgda4.0-3.99.11-X.cygport all
 
 This will create:
-  /usr/src/libgda4.0-3.99.6-X-src.tar.bz2
-  /usr/src/libgda4.0-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0-bin-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0-devel-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0-provider-bdb-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0-provider-mdb-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0-provider-mysql-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0-provider-postgres-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0-provider-sqlite-3.99.6-X.tar.bz2
-  /usr/src/libgda4.0_4-3.99.6-X.tar.bz2
+  /usr/src/libgda4.0-3.99.11-X-src.tar.bz2
+  /usr/src/libgda4.0-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0-bin-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0-devel-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0-provider-bdb-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0-provider-mdb-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0-provider-mysql-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0-provider-postgres-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0-provider-sqlite-3.99.11-X.tar.bz2
+  /usr/src/libgda4.0_4-3.99.11-X.tar.bz2
 
 -------------------------------------------
 
@@ -73,14 +74,14 @@ Files included in the binary packages:
   /usr/bin/cyggda-4.0-4.dll
   /usr/bin/cyggda-report-4.0-4.dll
   /usr/bin/cyggda-xslt-4.0-4.dll
-  /usr/share/doc/libgda4.0-3.99.6/AUTHORS
-  /usr/share/doc/libgda4.0-3.99.6/COPYING
-  /usr/share/doc/libgda4.0-3.99.6/COPYING.LIB
-  /usr/share/doc/libgda4.0-3.99.6/ChangeLog
-  /usr/share/doc/libgda4.0-3.99.6/INSTALL
-  /usr/share/doc/libgda4.0-3.99.6/NEWS
-  /usr/share/doc/libgda4.0-3.99.6/README
-  /usr/share/doc/libgda4.0-3.99.6/TODO
+  /usr/share/doc/libgda4.0-3.99.11/AUTHORS
+  /usr/share/doc/libgda4.0-3.99.11/COPYING
+  /usr/share/doc/libgda4.0-3.99.11/COPYING.LIB
+  /usr/share/doc/libgda4.0-3.99.11/ChangeLog
+  /usr/share/doc/libgda4.0-3.99.11/INSTALL
+  /usr/share/doc/libgda4.0-3.99.11/NEWS
+  /usr/share/doc/libgda4.0-3.99.11/README
+  /usr/share/doc/libgda4.0-3.99.11/TODO
   /usr/share/libgda-4.0/dtd/libgda-array.dtd
   /usr/share/libgda-4.0/dtd/libgda-paramlist.dtd
   /usr/share/libgda-4.0/dtd/libgda-server-operation.dtd
@@ -139,6 +140,16 @@ Files included in the binary packages:
   /usr/bin/gda-list-server-op-4.0.exe
   /usr/bin/gda-sql-4.0.exe
   /usr/bin/gda-test-connection-4.0.exe
+  /usr/share/libgda-4.0/web/cnc.js
+  /usr/share/libgda-4.0/web/gda-print.css
+  /usr/share/libgda-4.0/web/gda.css
+  /usr/share/libgda-4.0/web/irb.css
+  /usr/share/libgda-4.0/web/irb.js
+  /usr/share/libgda-4.0/web/jquery.js
+  /usr/share/libgda-4.0/web/md5.js
+  /usr/share/libgda-4.0/web/mouseapp_2.js
+  /usr/share/libgda-4.0/web/mouseirb_2.js
+  /usr/share/man/man1/gda-sql-4.0.1.gz
 
 (libgda4.0-provider-bdb)
   /usr/lib/libgda-4.0/providers/cyggda-bdb.dll
@@ -306,6 +317,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 3.99.11-1 -----
+Version bump.
 
 ----- version 3.99.6-1 -----
 Initial release of 4.0 branch for Cygwin.

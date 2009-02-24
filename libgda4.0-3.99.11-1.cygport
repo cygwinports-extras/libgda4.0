@@ -9,7 +9,7 @@ PKG_NAMES="${PN} ${PN}_4 ${PN}-bin ${PN}-devel"
 libgda4_0_4_CONTENTS="etc/ usr/bin/*-4.0-4.dll usr/share/doc/ usr/share/libgda-4.0/dtd/
                         usr/share/libgda-4.0/information_schema.xml
                         usr/share/locale/"
-libgda4_0_bin_CONTENTS="usr/bin/*-4.0.exe"
+libgda4_0_bin_CONTENTS="usr/bin/*-4.0.exe usr/share/libgda-4.0/web/ usr/share/man/man1/"
 libgda4_0_devel_CONTENTS="usr/include/ usr/lib/libgda*-4.0.*
                         usr/lib/pkgconfig/libgda-4.0.pc
                         usr/lib/pkgconfig/libgda-report-4.0.pc
@@ -26,11 +26,11 @@ do
 	CYGCONF_ARGS+=" --with-${prov#free}=/usr"
 done
 
-for noprov in firebird ibmdb2 ldap msql odbc oracle sybase tds xbase
+for noprov in firebird ibmdb2 java ldap msql odbc oracle sybase tds xbase
 do
 	CYGCONF_ARGS+=" --without-${noprov}"
 done
 
-CYGCONF_ARGS+=" --disable-binreloc"
+CYGCONF_ARGS+=" --disable-binreloc --disable-default-binary"
 
 #DIFF_EXCLUDES="gda-report.dtd"

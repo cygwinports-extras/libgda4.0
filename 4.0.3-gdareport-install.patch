@@ -1,0 +1,42 @@
+http://bugzilla.gnome.org/show_bug.cgi?id=579458
+
+--- origsrc/libgda-4.0.3/libgda-report/RML/gda-report-rml-document.c	2009-07-05 14:27:21.000000000 -0500
++++ src/libgda-4.0.3/libgda-report/RML/gda-report-rml-document.c	2009-08-26 17:13:16.477340700 -0500
+@@ -198,7 +198,7 @@ gda_report_rml_document_run_as_html (Gda
+ 	if (!converter) {
+ 		converter = g_find_program_in_path ("trml2html.py");
+ 		if (!converter) {
+-			converter = gda_gbr_get_file_path (GDA_BIN_DIR, "gda_trml2html", "trml2html.py", NULL);
++			converter = gda_gbr_get_file_path (GDA_LIB_DIR, LIBGDA_ABI_NAME, "trml2html", "trml2html.py", NULL);
+ 			if (!g_file_test (converter, G_FILE_TEST_IS_EXECUTABLE)) {
+ 				g_free (converter);
+ 				converter = NULL;
+@@ -229,7 +229,7 @@ gda_report_rml_document_run_as_pdf (GdaR
+ 	if (!converter) {
+ 		converter = g_find_program_in_path ("trml2pdf.py");
+ 		if (!converter) {
+-			converter = gda_gbr_get_file_path (GDA_BIN_DIR, "gda_trml2pdf", "trml2pdf.py", NULL);
++			converter = gda_gbr_get_file_path (GDA_LIB_DIR, LIBGDA_ABI_NAME, "trml2pdf", "trml2pdf.py", NULL);
+ 			if (!g_file_test (converter, G_FILE_TEST_IS_EXECUTABLE)) {
+ 				g_free (converter);
+ 				converter = NULL;
+--- origsrc/libgda-4.0.3/libgda-report/RML/trml2html/Makefile.am	2009-07-05 14:27:21.000000000 -0500
++++ src/libgda-4.0.3/libgda-report/RML/trml2html/Makefile.am	2009-08-26 17:12:30.322885400 -0500
+@@ -1,6 +1,6 @@
+ trml2html_SCRIPTS = trml2html.py
+ trml2html_DATA = __init__.py utils.py
+-trml2htmldir = $(bindir)/gda_trml2html
++trml2htmldir = $(libdir)/libgda-$(GDA_ABI_MAJOR_VERSION).$(GDA_ABI_MINOR_VERSION)/trml2html
+ 
+ EXTRA_DIST = \
+ 	$(trml2html_SCRIPTS) \
+--- origsrc/libgda-4.0.3/libgda-report/RML/trml2pdf/Makefile.am	2009-07-05 14:27:21.000000000 -0500
++++ src/libgda-4.0.3/libgda-report/RML/trml2pdf/Makefile.am	2009-08-26 17:12:50.868199400 -0500
+@@ -1,6 +1,6 @@
+ trml2pdf_SCRIPTS = trml2pdf.py
+ trml2pdf_DATA = __init__.py color.py utils.py
+-trml2pdfdir = $(bindir)/gda_trml2pdf
++trml2pdfdir = $(libdir)/libgda-$(GDA_ABI_MAJOR_VERSION).$(GDA_ABI_MINOR_VERSION)/trml2pdf
+ 
+ EXTRA_DIST = \
+ 	$(trml2pdf_SCRIPTS) \

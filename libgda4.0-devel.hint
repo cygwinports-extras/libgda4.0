@@ -1,5 +1,5 @@
 category: Database Gnome
-requires: libgda4.0_4 libdb4.6-devel libgamin1-devel libglib2.0-devel gettext libxml2-devel libxslt-devel
+requires: libgda4.0_4 libgamin1-devel libglib2.0-devel gettext libxml2-devel libxslt-devel
 external-source: libgda4.0
 sdesc: "GNOME Data Access libraries (development files)"
 ldesc: "GNU Data Access (GDA) is an attempt to provide uniform access 

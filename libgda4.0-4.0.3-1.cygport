@@ -4,11 +4,14 @@ inherit gnome2
 DESCRIPTION="GNOME Database Access libraries"
 HOMEPAGE="http://www.gnome-db.org/"
 
+PATCH_URI="4.0.3-dlopen-libdb.patch
+           4.0.3-gdareport-install.patch"
+
 PKG_NAMES="${PN} ${PN}_4 ${PN}-bin ${PN}-devel"
 
-libgda4_0_4_CONTENTS="etc/ usr/bin/*-4.0-4.dll usr/share/doc/ usr/share/libgda-4.0/dtd/
-                        usr/share/libgda-4.0/information_schema.xml
-                        usr/share/locale/"
+libgda4_0_4_CONTENTS="etc/ usr/bin/*-4.0-4.dll usr/lib/libgda-4.0/trml2*/
+                      usr/share/doc/ usr/share/libgda-4.0/dtd/
+                      usr/share/libgda-4.0/information_schema.xml usr/share/locale/"
 libgda4_0_bin_CONTENTS="usr/bin/*-4.0.exe usr/share/libgda-4.0/web/ usr/share/man/man1/"
 libgda4_0_devel_CONTENTS="usr/include/ usr/lib/libgda*-4.0.*
                         usr/lib/pkgconfig/libgda-4.0.pc
@@ -32,5 +35,3 @@ do
 done
 
 CYGCONF_ARGS+=" --disable-binreloc --disable-default-binary"
-
-#DIFF_EXCLUDES="gda-report.dtd"

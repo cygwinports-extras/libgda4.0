@@ -9,30 +9,30 @@ your data.  It is defined by a set of plugin APIs as generic as possible
 can be accessed through them.
 
 Runtime requirements:
-  cygwin-1.7.0-45
-  libdb4.6-4.6.21.3-10
+  cygwin-1.7.0-60
+  libdb4.5-4.5.20.2-1
   libgamin1_0-0.1.10-10
-  libglib2.0_0-2.20.1-1
-  libintl8-0.17-10
+  libglib2.0_0-2.20.4-1
+  libintl8-0.17-11
   libmdb0-0.6pre1-10
   libmysqlclient16-5.1.34-1
   libpq5-8.2.11-1
-  libreadline6-5.2.13-11
-  libsoup2.4_1-2.26.0-1
-  libxml2-2.7.3-10
+  libreadline6-5.2.14-12
+  libsoup2.4_1-2.26.3-1
+  libxml2-2.7.3-11
   libxslt-1.1.24-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.10-1.10.1-10
-  binutils-20080624-2
+  autoconf2.5-2.64-10
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
   bison-2.3-1
-  cygport-0.9.6-1
+  cygport-0.9.9-1
   flex-2.5.35-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
-  libtool-2.2.7a-12
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -46,276 +46,30 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libgda4.0-4.0.2-X-src.tar.bz2
+  unpack libgda4.0-4.0.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libgda4.0-4.0.2-X.cygport all
+  cygport ./libgda4.0-4.0.3-X.cygport all
 
 This will create:
-  /usr/src/libgda4.0-4.0.2-X-src.tar.bz2
-  /usr/src/libgda4.0-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0-bin-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0-devel-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0-provider-bdb-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0-provider-mdb-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0-provider-mysql-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0-provider-postgres-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0-provider-sqlite-4.0.2-X.tar.bz2
-  /usr/src/libgda4.0_4-4.0.2-X.tar.bz2
+  /usr/src/libgda4.0-4.0.3-X-src.tar.bz2
+  /usr/src/libgda4.0-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0-bin-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0-devel-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0-provider-bdb-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0-provider-mdb-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0-provider-mysql-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0-provider-postgres-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0-provider-sqlite-4.0.3-X.tar.bz2
+  /usr/src/libgda4.0_4-4.0.3-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(libgda4.0_4)
-  /etc/libgda-4.0/config
-  /etc/libgda-4.0/sales_test.db
-  /usr/bin/cyggda-4.0-4.dll
-  /usr/bin/cyggda-report-4.0-4.dll
-  /usr/bin/cyggda-xslt-4.0-4.dll
-  /usr/share/doc/libgda4.0/AUTHORS
-  /usr/share/doc/libgda4.0/COPYING
-  /usr/share/doc/libgda4.0/COPYING.LIB
-  /usr/share/doc/libgda4.0/ChangeLog
-  /usr/share/doc/libgda4.0/NEWS
-  /usr/share/doc/libgda4.0/README
-  /usr/share/doc/libgda4.0/TODO
-  /usr/share/libgda-4.0/dtd/libgda-array.dtd
-  /usr/share/libgda-4.0/dtd/libgda-paramlist.dtd
-  /usr/share/libgda-4.0/dtd/libgda-server-operation.dtd
-  /usr/share/libgda-4.0/information_schema.xml
-  /usr/share/locale/ar/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/az/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ca/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/cs/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/da/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/de/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/dz/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/el/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/en_CA/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/en_GB/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/es/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/eu/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/fa/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/fi/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/fr/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ga/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/gl/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/hr/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/hu/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/it/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ja/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ko/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/lt/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/mk/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ml/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ms/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/nb/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ne/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/nl/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/oc/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/pa/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/pl/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/pt/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/pt_BR/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/ru/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/rw/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/sk/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/sl/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/sq/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/sr/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/sv/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/tr/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/uk/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/vi/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/zh_CN/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/zh_HK/LC_MESSAGES/libgda-4.0.mo
-  /usr/share/locale/zh_TW/LC_MESSAGES/libgda-4.0.mo
-
-(libgda4.0-bin)
-  /usr/bin/gda-list-config-4.0.exe
-  /usr/bin/gda-list-server-op-4.0.exe
-  /usr/bin/gda-sql-4.0.exe
-  /usr/bin/gda-test-connection-4.0.exe
-  /usr/share/libgda-4.0/web/cnc.js
-  /usr/share/libgda-4.0/web/gda-print.css
-  /usr/share/libgda-4.0/web/gda.css
-  /usr/share/libgda-4.0/web/irb.css
-  /usr/share/libgda-4.0/web/irb.js
-  /usr/share/libgda-4.0/web/jquery.js
-  /usr/share/libgda-4.0/web/md5.js
-  /usr/share/libgda-4.0/web/mouseapp_2.js
-  /usr/share/libgda-4.0/web/mouseirb_2.js
-  /usr/share/man/man1/gda-sql-4.0.1.gz
-
-(libgda4.0-provider-bdb)
-  /usr/lib/libgda-4.0/providers/cyggda-bdb.dll
-  /usr/lib/libgda-4.0/providers/libgda-bdb.la
-  /usr/share/libgda-4.0/bdb_specs_dsn.xml
-  /usr/lib/pkgconfig/libgda-bdb-4.0.pc
-
-(libgda4.0-provider-mdb)
-  /usr/lib/libgda-4.0/providers/cyggda-mdb.dll
-  /usr/lib/libgda-4.0/providers/libgda-mdb.la
-  /usr/share/libgda-4.0/mdb_specs_dsn.xml
-  /usr/lib/pkgconfig/libgda-mdb-4.0.pc
-
-(libgda4.0-provider-mysql)
-  /usr/lib/libgda-4.0/providers/cyggda-mysql.dll
-  /usr/lib/libgda-4.0/providers/libgda-mysql.la
-  /usr/lib/pkgconfig/libgda-mysql-4.0.pc
-  /usr/share/libgda-4.0/mysql_specs_add_column.xml
-  /usr/share/libgda-4.0/mysql_specs_create_db.xml
-  /usr/share/libgda-4.0/mysql_specs_create_index.xml
-  /usr/share/libgda-4.0/mysql_specs_create_table.xml
-  /usr/share/libgda-4.0/mysql_specs_create_view.xml
-  /usr/share/libgda-4.0/mysql_specs_drop_column.xml
-  /usr/share/libgda-4.0/mysql_specs_drop_db.xml
-  /usr/share/libgda-4.0/mysql_specs_drop_index.xml
-  /usr/share/libgda-4.0/mysql_specs_drop_table.xml
-  /usr/share/libgda-4.0/mysql_specs_drop_view.xml
-  /usr/share/libgda-4.0/mysql_specs_dsn.xml
-  /usr/share/libgda-4.0/mysql_specs_rename_table.xml
-
-(libgda4.0-provider-postgres)
-  /usr/lib/libgda-4.0/providers/cyggda-postgres.dll
-  /usr/lib/libgda-4.0/providers/libgda-postgres.la
-  /usr/share/libgda-4.0/postgres_specs_add_column.xml
-  /usr/share/libgda-4.0/postgres_specs_create_db.xml
-  /usr/share/libgda-4.0/postgres_specs_create_index.xml
-  /usr/share/libgda-4.0/postgres_specs_create_table.xml
-  /usr/share/libgda-4.0/postgres_specs_create_view.xml
-  /usr/share/libgda-4.0/postgres_specs_drop_column.xml
-  /usr/share/libgda-4.0/postgres_specs_drop_db.xml
-  /usr/share/libgda-4.0/postgres_specs_drop_index.xml
-  /usr/share/libgda-4.0/postgres_specs_drop_table.xml
-  /usr/share/libgda-4.0/postgres_specs_drop_view.xml
-  /usr/share/libgda-4.0/postgres_specs_dsn.xml
-  /usr/share/libgda-4.0/postgres_specs_rename_table.xml
-  /usr/lib/pkgconfig/libgda-postgres-4.0.pc
-
-(libgda4.0-provider-sqlite)
-  /usr/lib/libgda-4.0/providers/cyggda-sqlite.dll
-  /usr/lib/libgda-4.0/providers/libgda-sqlite.la
-  /usr/share/libgda-4.0/sqlite_specs_add_column.xml
-  /usr/share/libgda-4.0/sqlite_specs_create_db.xml
-  /usr/share/libgda-4.0/sqlite_specs_create_index.xml
-  /usr/share/libgda-4.0/sqlite_specs_create_table.xml
-  /usr/share/libgda-4.0/sqlite_specs_create_view.xml
-  /usr/share/libgda-4.0/sqlite_specs_drop_db.xml
-  /usr/share/libgda-4.0/sqlite_specs_drop_index.xml
-  /usr/share/libgda-4.0/sqlite_specs_drop_table.xml
-  /usr/share/libgda-4.0/sqlite_specs_drop_view.xml
-  /usr/share/libgda-4.0/sqlite_specs_dsn.xml
-  /usr/share/libgda-4.0/sqlite_specs_rename_table.xml
-  /usr/lib/pkgconfig/libgda-sqlite-4.0.pc
-
-(libgda4.0-devel)
-  /usr/include/libgda-4.0/libgda-report/gda-report-docbook-document.h
-  /usr/include/libgda-4.0/libgda-report/gda-report-document.h
-  /usr/include/libgda-4.0/libgda-report/gda-report-engine.h
-  /usr/include/libgda-4.0/libgda-report/gda-report-rml-document.h
-  /usr/include/libgda-4.0/libgda-report/libgda-report.h
-  /usr/include/libgda-4.0/libgda-xslt/libgda-xslt.h
-  /usr/include/libgda-4.0/libgda/gda-attributes-manager.h
-  /usr/include/libgda-4.0/libgda/gda-batch.h
-  /usr/include/libgda-4.0/libgda/gda-binreloc.h
-  /usr/include/libgda-4.0/libgda/gda-blob-op.h
-  /usr/include/libgda-4.0/libgda/gda-column.h
-  /usr/include/libgda-4.0/libgda/gda-config.h
-  /usr/include/libgda-4.0/libgda/gda-connection-event.h
-  /usr/include/libgda-4.0/libgda/gda-connection-private.h
-  /usr/include/libgda-4.0/libgda/gda-connection.h
-  /usr/include/libgda-4.0/libgda/gda-data-access-wrapper.h
-  /usr/include/libgda-4.0/libgda/gda-data-comparator.h
-  /usr/include/libgda-4.0/libgda/gda-data-handler.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-array.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-bdb.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-dir.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-extra.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-import.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-iter-extra.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-iter.h
-  /usr/include/libgda-4.0/libgda/gda-data-model-private.h
-  /usr/include/libgda-4.0/libgda/gda-data-model.h
-  /usr/include/libgda-4.0/libgda/gda-data-proxy.h
-  /usr/include/libgda-4.0/libgda/gda-data-select.h
-  /usr/include/libgda-4.0/libgda/gda-debug-macros.h
-  /usr/include/libgda-4.0/libgda/gda-decl.h
-  /usr/include/libgda-4.0/libgda/gda-easy.h
-  /usr/include/libgda-4.0/libgda/gda-enum-types.h
-  /usr/include/libgda-4.0/libgda/gda-enums.h
-  /usr/include/libgda-4.0/libgda/gda-error.h
-  /usr/include/libgda-4.0/libgda/gda-holder.h
-  /usr/include/libgda-4.0/libgda/gda-lockable.h
-  /usr/include/libgda-4.0/libgda/gda-log.h
-  /usr/include/libgda-4.0/libgda/gda-marshal.h
-  /usr/include/libgda-4.0/libgda/gda-meta-store.h
-  /usr/include/libgda-4.0/libgda/gda-meta-struct.h
-  /usr/include/libgda-4.0/libgda/gda-mutex.h
-  /usr/include/libgda-4.0/libgda/gda-quark-list.h
-  /usr/include/libgda-4.0/libgda/gda-row.h
-  /usr/include/libgda-4.0/libgda/gda-server-operation.h
-  /usr/include/libgda-4.0/libgda/gda-server-provider-extra.h
-  /usr/include/libgda-4.0/libgda/gda-server-provider-private.h
-  /usr/include/libgda-4.0/libgda/gda-server-provider.h
-  /usr/include/libgda-4.0/libgda/gda-set.h
-  /usr/include/libgda-4.0/libgda/gda-statement-extra.h
-  /usr/include/libgda-4.0/libgda/gda-statement.h
-  /usr/include/libgda-4.0/libgda/gda-threader.h
-  /usr/include/libgda-4.0/libgda/gda-transaction-status-private.h
-  /usr/include/libgda-4.0/libgda/gda-transaction-status.h
-  /usr/include/libgda-4.0/libgda/gda-util.h
-  /usr/include/libgda-4.0/libgda/gda-value.h
-  /usr/include/libgda-4.0/libgda/gda-xa-transaction.h
-  /usr/include/libgda-4.0/libgda/handlers/gda-handler-bin.h
-  /usr/include/libgda-4.0/libgda/handlers/gda-handler-boolean.h
-  /usr/include/libgda-4.0/libgda/handlers/gda-handler-numerical.h
-  /usr/include/libgda-4.0/libgda/handlers/gda-handler-string.h
-  /usr/include/libgda-4.0/libgda/handlers/gda-handler-time.h
-  /usr/include/libgda-4.0/libgda/handlers/gda-handler-type.h
-  /usr/include/libgda-4.0/libgda/libgda.h
-  /usr/include/libgda-4.0/libgda/sqlite/gda-sqlite-provider.h
-  /usr/include/libgda-4.0/providers-support/gda-data-select-priv.h
-  /usr/include/libgda-4.0/providers-support/gda-pstmt.h
-  /usr/include/libgda-4.0/sql-parser/gda-sql-parser-enum-types.h
-  /usr/include/libgda-4.0/sql-parser/gda-sql-parser.h
-  /usr/include/libgda-4.0/sql-parser/gda-sql-statement.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-compound.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-decl.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-delete.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-insert.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-parts.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-pspec.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-select.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-trans.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-unknown.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-update.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct-util.h
-  /usr/include/libgda-4.0/sql-parser/gda-statement-struct.h
-  /usr/include/libgda-4.0/virtual/gda-vconnection-data-model.h
-  /usr/include/libgda-4.0/virtual/gda-vconnection-hub.h
-  /usr/include/libgda-4.0/virtual/gda-virtual-connection.h
-  /usr/include/libgda-4.0/virtual/gda-virtual-provider.h
-  /usr/include/libgda-4.0/virtual/gda-vprovider-data-model.h
-  /usr/include/libgda-4.0/virtual/gda-vprovider-hub.h
-  /usr/include/libgda-4.0/virtual/libgda-virtual.h
-  /usr/lib/libgda-4.0.dll.a
-  /usr/lib/libgda-4.0.la
-  /usr/lib/libgda-report-4.0.dll.a
-  /usr/lib/libgda-report-4.0.la
-  /usr/lib/libgda-xslt-4.0.dll.a
-  /usr/lib/libgda-xslt-4.0.la
-  /usr/lib/pkgconfig/libgda-4.0.pc
-  /usr/lib/pkgconfig/libgda-report-4.0.pc
-  /usr/lib/pkgconfig/libgda-xslt-4.0.pc
-  /usr/share/gtk-doc/html/libgda-4.0/*
-
-------------------
-
 Port Notes:
+
+----- version 4.0.3-1 -----
+Version bump.
 
 ----- version 4.0.2-1 -----
 Initial release of 4.0 branch for Cygwin 1.7.

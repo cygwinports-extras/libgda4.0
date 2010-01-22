@@ -9,31 +9,31 @@ your data.  It is defined by a set of plugin APIs as generic as possible
 can be accessed through them.
 
 Runtime requirements:
-  cygwin-1.7.0-62
+  cygwin-1.7.1-1
   libdb4.5-4.5.20.2-1
   libgamin1_0-0.1.10-10
-  libglib2.0_0-2.22.2-1
+  libglib2.0_0-2.22.4-1
   libintl8-0.17-11
   libmdb0-0.6pre1-10
   libmysqlclient16-5.1.39-1
   libpq5-8.2.11-1
   libreadline7-6.0.3-2
-  libsoup2.4_1-2.28.1-1
-  libxml2-2.7.4-1
-  libxslt-1.1.24-10
+  libsoup2.4_1-2.28.2-1
+  libxml2-2.7.6-1
+  libxslt-1.1.26-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.64-10
-  automake1.10-1.10.2-10
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
   binutils-2.19.51-1
   bison-2.3-1
   cygport-0.9.10-1
   flex-2.5.35-1
   gawk-3.1.7-1
-  gcc4-core-4.3.4-1
+  gcc4-core-4.3.4-3
   gnome-common-2.28.0-1
-  libtool-2.2.7a-14
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -47,27 +47,30 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libgda4.0-4.0.5-X-src.tar.bz2
+  unpack libgda4.0-4.0.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libgda4.0-4.0.5-X.cygport all
+  cygport ./libgda4.0-4.0.6-X.cygport all
 
 This will create:
-  /usr/src/libgda4.0-4.0.5-X-src.tar.bz2
-  /usr/src/libgda4.0-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0-bin-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0-devel-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0-provider-bdb-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0-provider-mdb-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0-provider-mysql-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0-provider-postgres-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0-provider-sqlite-4.0.5-X.tar.bz2
-  /usr/src/libgda4.0_4-4.0.5-X.tar.bz2
+  /usr/src/libgda4.0-4.0.6-X-src.tar.bz2
+  /usr/src/libgda4.0-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0-bin-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0-devel-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0-provider-bdb-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0-provider-mdb-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0-provider-mysql-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0-provider-postgres-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0-provider-sqlite-4.0.6-X.tar.bz2
+  /usr/src/libgda4.0_4-4.0.6-X.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 4.0.6-1 -----
+Version bump.
 
 ----- version 4.0.5-1 -----
 Version bump for GNOME 2.28.

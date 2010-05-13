@@ -4,10 +4,13 @@ inherit gnome2
 DESCRIPTION="GNOME Database Access libraries"
 HOMEPAGE="http://www.gnome-db.org/"
 
-PATCH_URI="4.0.3-dlopen-libdb.patch
-           4.0.3-gdareport-install.patch"
+PATCH_URI="
+	4.0.3-dlopen-libdb.patch
+	4.0.3-gdareport-install.patch
+	4.0.8-introspection.patch
+"
 
-PKG_NAMES="${PN} ${PN}_4 ${PN}-bin ${PN}-devel"
+PKG_NAMES="${PN} ${PN}_4 ${PN}-bin ${PN}-devel girepository-Gda4.0"
 
 libgda4_0_4_CONTENTS="etc/ usr/bin/*-4.0-4.dll usr/lib/libgda-4.0/trml2*/
                       usr/share/doc/ usr/share/libgda-4.0/dtd/
@@ -18,6 +21,7 @@ libgda4_0_devel_CONTENTS="usr/include/ usr/lib/libgda*-4.0.*
                         usr/lib/pkgconfig/libgda-report-4.0.pc
                         usr/lib/pkgconfig/libgda-xslt-4.0.pc
                         usr/share/gtk-doc/"
+girepository_Gda4_0_CONTENTS="usr/*/gir*/Gda-4.0.*"
 
 for prov in bdb mdb mysql postgres sqlite
 do

@@ -1,0 +1,14 @@
+--- origsrc/libgda-4.0.8/libgda/Makefile.am	2010-03-06 06:53:26.000000000 -0600
++++ src/libgda-4.0.8/libgda/Makefile.am	2010-05-13 16:44:42.135394500 -0500
+@@ -317,10 +317,9 @@ Gda-@GDA_ABI_VERSION@.gir: $(INTROSPECTI
+ 		--add-include-path=thread-wrapper \
+ 		--add-include-path=handlers \
+ 		--c-include='libgda/libgda.h' \
+-		--include=GL-1.0 \
+ 		--include=GObject-2.0 \
+ 		--include=libxml2-2.0 \
+-		--library=gda-@GDA_ABI_VERSION@ \
++		--library=libgda-@GDA_ABI_VERSION@.la \
+ 	    $(INCLUDE_CFLAGS) \
+ 	    --output $@ \
+ 		$(addprefix $(srcdir)/, $(gda_headers)) \

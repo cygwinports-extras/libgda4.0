@@ -1,7 +1,7 @@
 category: Database Gnome
-requires: libgda4.0_4
+requires: libgcc1 libgcrypt11 libgda4.0_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libgtksourceview2.0_0 libintl8 libpango1.0_0 libxml2
 external-source: libgda4.0
-sdesc: "GNOME Data Access libraries (SQLite3 provider)"
+sdesc: "GNOME Data Access UI library (runtime)"
 ldesc: "GNU Data Access (GDA) is an attempt to provide uniform access 
 to different kinds of data sources (databases, information servers, 
 mail spools, etc).

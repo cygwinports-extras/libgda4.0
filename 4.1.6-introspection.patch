@@ -1,0 +1,30 @@
+--- origsrc/libgda-4.1.6/libgda/Makefile.am	2010-05-11 14:13:24.000000000 -0500
++++ src/libgda-4.1.6/libgda/Makefile.am	2010-06-08 20:39:28.185202500 -0500
+@@ -336,10 +336,9 @@ Gda-@GDA_ABI_VERSION@.gir: $(INTROSPECTI
+ 		--namespace Gda --nsversion=@GDA_ABI_VERSION@ \
+ 		-I$(top_srcdir) -I$(top_srcdir)/libgda \
+ 		$(LIBGDA_CFLAGS) \
+-		--include=GL-1.0 \
+ 		--include=GObject-2.0 \
+ 		--include=libxml2-2.0 \
+-		--library=gda-@GDA_ABI_VERSION@ \
++		--library=libgda-@GDA_ABI_VERSION@.la \
+ 	    $(INCLUDE_CFLAGS) \
+ 	    --c-include=$(top_srcdir)/libgda/csv.h \
+ 		--c-include=$(top_srcdir)/libgda/libcsv.c \
+--- origsrc/libgda-4.1.6/libgda-ui/Makefile.am	2010-05-11 14:13:23.000000000 -0500
++++ src/libgda-4.1.6/libgda-ui/Makefile.am	2010-06-08 20:39:48.434360700 -0500
+@@ -236,12 +236,11 @@ Gdaui-@GDA_ABI_VERSION@.gir: $(INTROSPEC
+ 		$(GTK_CFLAGS) \
+ 		$(GIO_CFLAGS) \
+ 		--add-include-path=$(top_builddir)/libgda \
+-		--include=GL-1.0 \
+ 		--include=GObject-2.0 \
+ 		--include=libxml2-2.0 \
+ 		--include=Gtk-2.0 \
+ 		--include=Gda-4.0 \
+-		--library=gda-ui-@GDA_ABI_VERSION@ \
++		--library=libgda-ui-@GDA_ABI_VERSION@.la \
+ 	    $(INCLUDE_CFLAGS) \
+ 	    --output $@ \
+ 		$(addprefix $(srcdir)/, $(ui_sources)) \

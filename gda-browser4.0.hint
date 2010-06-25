@@ -1,7 +1,7 @@
 category: Database Gnome
-requires: libgda4.0_4 libglib2.0-devel gettext libxml2-devel libxslt-devel
+requires: libcairo2 libgcc1 libgda4.0_4 libgda-ui4.0_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgoocanvas3 libgraph4 libgtk2.0_0 libgtksourceview2.0_0 libgvc5 libintl8 libxml2
 external-source: libgda4.0
-sdesc: "GNOME Data Access libraries (development files)"
+sdesc: "GNOME Data Access browser"
 ldesc: "GNU Data Access (GDA) is an attempt to provide uniform access 
 to different kinds of data sources (databases, information servers, 
 mail spools, etc).
@@ -9,4 +9,3 @@ It is a complete architecture that provides all you need to access
 your data.  It is defined by a set of plugin APIs as generic as 
 possible (but very powerful at the same time) so that any kind of data 
 source can be accessed through them."
-

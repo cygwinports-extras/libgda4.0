@@ -1,0 +1,22 @@
+--- origsrc/libgda-4.1.7/libgda/Makefile.am	2010-06-20 06:14:01.000000000 -0500
++++ src/libgda-4.1.7/libgda/Makefile.am	2010-06-30 17:16:36.799580600 -0500
+@@ -344,7 +344,7 @@ introspection_sources = $(gda_sources) \
+ 	$(threadwrapper) \
+ 	$(sqlparser) \
+ 	$(handlers)
+-Gda-4_0.gir: $(lib_LTLIBRARIES)
++Gda-4.0.gir: $(lib_LTLIBRARIES)
+ Gda_4_0_gir_INCLUDES = GObject-2.0 libxml2-2.0
+ Gda_4_0_gir_CFLAGS = $(AM_CPPFLAGS)
+ Gda_4_0_gir_LIBS = $(lib_LTLIBRARIES)
+--- origsrc/libgda-4.1.7/libgda-ui/Makefile.am	2010-06-20 06:14:01.000000000 -0500
++++ src/libgda-4.1.7/libgda-ui/Makefile.am	2010-06-30 17:16:46.440132000 -0500
+@@ -207,7 +207,7 @@ introspection_sources = \
+ 	$(ui_sources) \
+ 	$(ui_data_entries_sources)
+ 
+-Gdaui-4_0.gir: $(lib_LTLIBRARIES)
++Gdaui-4.0.gir: $(lib_LTLIBRARIES)
+ Gdaui_4_0_gir_INCLUDES = Gtk-2.0 Gda-4.0
+ Gdaui_4_0_gir_CFLAGS = $(AM_CPPFLAGS)
+ Gdaui_4_0_gir_LIBS = $(lib_LTLIBRARIES)

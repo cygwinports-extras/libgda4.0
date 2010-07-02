@@ -1,11 +1,12 @@
---- origsrc/libgda-4.0.3/configure.in	2009-08-24 12:19:57.000000000 -0500
-+++ src/libgda-4.0.3/configure.in	2009-08-25 22:28:11.288477100 -0500
-@@ -145,11 +145,13 @@ EXPORT_SYM_REGEX='-export-symbols-regex 
- EXPORT_PROV_SYM_REGEX='-export-symbols-regex "^(plugin_|Java_|g_module).*"'
+--- origsrc/libgda-4.1.7/configure.ac	2010-06-25 14:09:03.000000000 -0500
++++ src/libgda-4.1.7/configure.ac	2010-06-30 17:04:40.873631900 -0500
+@@ -293,12 +293,14 @@ EXPORT_PROV_SYM_REGEX='-export-symbols-r
+ EXPORT_UI_SYM_REGEX='-export-symbols-regex "^(gdaui_).*"'
  AC_MSG_CHECKING([for platform])
  platform_win32=no
 +platform_cygwin=no
  platform_carbon=no
+ have_ige=no
  linklibext=".so"
  case "$host" in
  *-cygwin*)
@@ -14,15 +15,15 @@
      NO_UNDEFINED='-no-undefined'
      SOPREFIX='cyg'
      LIBTOOL_EXPORT_OPTIONS=$EXPORT_SYM_REGEX
-@@ -194,6 +196,7 @@ case "$host" in
+@@ -358,6 +360,7 @@ case "$host" in
  esac
  
  AM_CONDITIONAL(PLATFORM_WIN32, [test $platform_win32 = yes])
 +AM_CONDITIONAL(PLATFORM_CYGWIN, [test $platform_win32 = yes])
  AM_CONDITIONAL(PLATFORM_CARBON, [test $platform_carbon = yes])
+ AM_CONDITIONAL(HAVE_IGE, [test $have_ige = yes])
  AC_SUBST(LIBTOOL_EXPORT_OPTIONS)
- AC_SUBST(LIBTOOL_PROV_EXPORT_OPTIONS)
-@@ -335,6 +338,18 @@ then
+@@ -539,6 +542,18 @@ then
  				break
  			fi
  
@@ -41,7 +42,7 @@
  			if test $platform_win32 = no -a -f $d/include/db.h -a -f $d/$lib/libdb$linklibext
  			then
  				AC_MSG_RESULT(found Berkeley DB in $d)
-@@ -1098,7 +1113,7 @@ dnl test for system-installed SQLite
+@@ -1333,7 +1348,7 @@ dnl test for system-installed SQLite
  dnl If no SQLite is found or if the SQLite found does not have the sqlite3_table_column_metadata()
  dnl function call, then use the embedded version
  dnl also, on Win32, always use the embedded version

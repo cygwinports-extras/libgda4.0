@@ -5,9 +5,10 @@ DESCRIPTION="GNOME Database Access libraries"
 HOMEPAGE="http://www.gnome-db.org/"
 
 PATCH_URI="
-	4.0.3-dlopen-libdb.patch
+	4.1.7-cygwin.patch
 	4.0.3-gdareport-install.patch
-	4.1.6-introspection.patch
+	4.1.7-introspection.patch
+	4.1.7-no-undefined.patch
 "
 
 PKG_NAMES="${PN} libgda4.0_4 libgda4.0-devel libgda-ui4.0_4 libgda-ui4.0-devel

@@ -1,0 +1,13 @@
+--- origsrc/libgda-4.1.7/providers/sqlite/Makefile.am	2010-06-25 14:09:03.000000000 -0500
++++ src/libgda-4.1.7/providers/sqlite/Makefile.am	2010-06-30 17:26:44.044313000 -0500
+@@ -15,7 +15,9 @@ libgda_sqlite_la_SOURCES = \
+ 	libmain.c
+ 
+ libgda_sqlite_la_LDFLAGS = -export-dynamic -module -avoid-version $(NO_UNDEFINED) $(LIBTOOL_PROV_EXPORT_OPTIONS)
+-libgda_sqlite_la_LIBADD = 
++libgda_sqlite_la_LIBADD = \
++	$(top_builddir)/libgda/libgda-4.0.la \
++	$(LIBGDA_LIBS)
+ 
+ xmldir   = $(datadir)/libgda-4.0
+ xml_in_files = \

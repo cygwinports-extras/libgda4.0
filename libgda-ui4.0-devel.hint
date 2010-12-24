@@ -1,5 +1,5 @@
 category: Database Gnome
-requires: libgda-ui4.0_4 libgda4.0-devel libgdk_pixbuf2.0-devel libglib2.0-devel libgtk2.0-devel libpango1.0-devel libxml2-devel
+requires: libgda-ui4.0_4 libcairo-devel libgda4.0-devel libgdk_pixbuf2.0-devel libglib2.0-devel libgtk2.0-devel libpango1.0-devel libxml2-devel
 external-source: libgda4.0
 sdesc: "GNOME Data Access UI library (development)"
 ldesc: "GNU Data Access (GDA) is an attempt to provide uniform access 

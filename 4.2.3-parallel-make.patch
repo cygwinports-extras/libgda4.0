@@ -1,0 +1,11 @@
+--- origsrc/libgda-4.2.3/libgda-report/engine/Makefile.am	2011-01-08 08:36:26.000000000 -0600
++++ src/libgda-4.2.3/libgda-report/engine/Makefile.am	2011-01-30 23:59:13.244787700 -0600
+@@ -27,7 +27,7 @@ libgda_report_engine_4_0_la_LIBADD = $(L
+ test_rt_parser_SOURCES = \
+ 	test-rt-parser.c
+ 
+-test_rt_parser_LDFLAGS = libgda-report-engine-4.0.la $(GDKPIXBUF_LIBS)
++test_rt_parser_LDADD = libgda-report-engine-4.0.la $(GDKPIXBUF_LIBS)
+ 
+ gdareportincludedir=$(includedir)/libgda-$(GDA_ABI_MAJOR_VERSION).$(GDA_ABI_MINOR_VERSION)/libgda-report
+ gdareportinclude_HEADERS=$(gda_report_headers)

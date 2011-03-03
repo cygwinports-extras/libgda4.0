@@ -7,9 +7,7 @@ HOMEPAGE="http://www.gnome-db.org/"
 PATCH_URI="
 	4.2.2-cygwin.patch
 	4.0.3-gdareport-install.patch
-	4.1.7-introspection.patch
 	4.2.2-no-undefined.patch
-	4.2.3-parallel-make.patch
 "
 
 PKG_NAMES="libgda4.0_4 libgda4.0-devel libgda-ui4.0_4 libgda-ui4.0-devel

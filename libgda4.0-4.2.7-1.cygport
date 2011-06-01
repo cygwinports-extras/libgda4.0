@@ -49,3 +49,5 @@ CYGCONF_ARGS="
 	--without-oracle
 	--with-postgres=/usr
 "
+
+MAKEOPTS+=" HTML_IMAGES= "

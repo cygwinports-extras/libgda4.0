@@ -44,6 +44,7 @@ CYGCONF_ARGS="
 	--disable-binreloc
 	--without-java
 	--with-bdb=/usr
+	--with-ldap=/usr
 	--with-mdb=/usr
 	--with-mysql=/usr
 	--without-oracle

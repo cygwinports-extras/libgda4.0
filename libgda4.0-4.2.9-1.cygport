@@ -6,7 +6,6 @@ HOMEPAGE="http://www.gnome-db.org/"
 
 PATCH_URI="
 	4.2.2-cygwin.patch
-	4.0.3-gdareport-install.patch
 	4.2.2-no-undefined.patch
 "
 
@@ -21,7 +20,6 @@ libgda4_0_4_CONTENTS="--exclude=*gda-ui* --exclude=demo --exclude=icons
                       etc/ usr/bin/*-4.0-4.dll
                       usr/bin/gda-list* usr/bin/gda-sql* usr/bin/gda-test*
                       usr/lib/libgda-4.0/providers/
-                      usr/lib/libgda-4.0/trml2*/
                       usr/share/doc/ usr/share/libgda-4.0/
                       usr/share/locale/ usr/share/man/"
 libgda4_0_devel_CONTENTS="--exclude=*gda-ui* usr/include/ usr/lib/libgda*-4.0.*

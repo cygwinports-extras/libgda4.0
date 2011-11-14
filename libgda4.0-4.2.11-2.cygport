@@ -38,6 +38,8 @@ libgda_ui4_0_devel_CONTENTS="usr/bin/gdaui-demo-*
 girepository_Gda4_0_CONTENTS="usr/*/gir*/Gda-4.0.*"
 girepository_Gdaui4_0_CONTENTS="usr/*/gir*/Gdaui-4.0.*"
 
+DISTCLEANFILES="tools/browser/doc/*l/* doc/C/*l/*"
+
 CYGCONF_ARGS="
 	--disable-binreloc
 	--without-java
